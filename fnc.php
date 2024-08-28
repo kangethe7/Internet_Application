@@ -11,5 +11,10 @@ class fnc{
         return $fname;
     }
 
+    public function user_age($name, $yob){
+      $age = date('Y') - $yob;   
+      return $age; 
+    }
+
 }
 ?>
