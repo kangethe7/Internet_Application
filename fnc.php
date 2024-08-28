@@ -13,8 +13,13 @@ class fnc{
 
     public function user_age($name, $yob){
       $age = date('Y') - $yob;   
-      return $age; 
+      return $name . " is " . $age; 
     }
 
 }
+
+$obj = new fnc();
+
+print $obj->user_age("Alex", 2004);
+
 ?>
