@@ -10,5 +10,8 @@
     <h2>This is my first page</h2>
     <h2>This is my first page</h2>
     <p>week 2 commits</p>
+    <?php
+    require_once('load.php');
+    ?>
 </body>
 </html>
