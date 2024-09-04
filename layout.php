@@ -12,7 +12,7 @@ class layout{
 <body>
       <?php
     }
-    public funtcion footer(){
+    public function footer(){
         ?>
         <div>
             Copyright &copy; ICS <?php print date("Y"); ?>

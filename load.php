@@ -1,9 +1,12 @@
 <?php
-require_once('user_details.php');
+require_once('layout.php');
+require_once('menus.php');
+$objlayout = new layout();
+$objmenu = new menus();
 
-$obj = new user_details();
+// $obj = new user_details();
 
-$obj = new user_details();
+
 
 $arr = ["black", "white", "green", "red"];
 
