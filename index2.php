@@ -11,7 +11,7 @@
     <h2>This is my first page</h2>
     <p>week 2 commits</p>
     <?php
-    require_once('load.php');
+    require_once('load.php'); // require_once() function is used to include and evaluate the specified file only once
     ?>
 </body>
 </html>

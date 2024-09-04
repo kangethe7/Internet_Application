@@ -1,6 +1,6 @@
 <?php
 
-class fnc{
+class user_details{
      var $fname;
      public $username;
      var $yob;
@@ -18,8 +18,8 @@ class fnc{
 
 }
 
-$obj = new fnc();
+$obj = new user_details();
 
-print $obj->user_age("Alex", 2004);
+//print $obj->user_age("Alex", 2004);
 
 ?>
