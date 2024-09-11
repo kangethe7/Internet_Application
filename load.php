@@ -1,25 +1,44 @@
 <?php
-require_once('layout.php');
-require_once('menus.php');
-$objlayout = new layout();
-$objmenu = new menus();
 
-// $obj = new user_details();
+// Class Auto Load 
 
+function classAutoLoad($classname){
 
+    $directories = ["contents", "layouts", "menus"];
 
-$arr = ["black", "white", "green", "red"];
-
-foreach ($arr AS $color){
-    print $color. "<br>";
+    foreach($directories AS $dir){
+        $filename = dirname(__FILE__) . DIRECTORY_SEPARATOR . $dir . DIRECTORY_SEPARATOR . $classname . ".php";
+        if(file_exists($filename) AND is_readable($filename)){
+            require_once $filename;
+        }
+    }
 }
 
-print dirname(__FILE__); // function returns directory name from a path
-print "<br>";
-print "<br>";
-print $_SERVER["PHP_SELF"]; // returns the filename of the currently executing script
-print "<br>";
-print "<br>";
-print basename($_SERVER["PHP_SELF"]); // returns the filename component of the path
+spl_autoload_register('classAutoLoad');
 
-?>
+// Create instances of all classes
+    $Objlayout = new layouts();
+    $Objmenus = new menus();
+    $Objheadings = new headings();
+    $Objcontent = new contents();
+    
+
+
+
+
+
+
+// print 
+// print "<br>";
+// print "<br>";
+// print $_SERVER["PHP_SELF"];
+// print "<br>";
+// print "<br>";
+// print basename($_SERVER["PHP_SELF"]);
+// print "<br>";
+// print "<br>";
+// if(file_exists("index.php") AND is_readable("index.php")){
+//     print "yes";
+// }else{
+//     print "no";
+// }

@@ -1,7 +1,10 @@
 <?php
 require_once('load.php');
-$objlayout->heading();
-$objmenu->main_menu();
+$Objlayout->heading();
+$Objmenus->main_menu();
+$Objlayout->footer();
+$Objheadings->main_banner();
+$Objcontent->content();
 ?>
     <!-- <h1>This is my first page</h1> -->
     <?php
